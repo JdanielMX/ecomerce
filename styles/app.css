@@ -1,0 +1,323 @@
+/* se utiliza rem como medida para hacer un poco mas adaptable la pagina
+como el navegador maneja 16px ponemos un fon-size de 62.5 para establecer
+en 10 px y hacer los calculos mas rapido
+
+*/
+html { 
+    box-sizing: border-box; /* ej: tenemos un div de 250px, luego agregamos un width y luego un padding al div, esto deberia resultar que el div crece, pero al poner esta propiedad hacemos que no se modifique el tamaño del elemento y quede siempre de 250px en total con lo que le hayamos agregado */
+    font-size: 62.5%; /*Esto es un pequeño hack para que cada REM sea = a 10px, entonces es mas simple calcular los REM a usar.*/
+    height: 100vh; /* esto hace que al final de la pagina no quede un especio blanco y el color del footer llegue hasta el final de la vista*/
+}
+ 
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+ 
+
+
+body {
+
+    font-family: "Raleway", serif;
+    font-size: 1.6rem;
+    line-height: 2;
+    
+}
+
+
+
+h1,h2,h3{
+
+    font-family: "Playfair", serif;
+}
+
+h1{
+    font-size: 5rem;
+}
+
+h2{
+
+font-size: 3.6rem;
+}
+
+
+
+h3{
+    font-size: 2.8rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/*utilidades*/
+
+.text-center{
+
+    text-align: center;
+}
+
+
+
+
+
+/* se utiliza para que las imagenes no desborden de su contenedor*/
+img {
+
+    width: 100%;
+    display: block;
+}
+
+
+/* header de pagina*/
+
+.nombre-sitio {
+
+    margin: 5rem 0;
+    text-align: center;
+}
+
+
+.nombre-sitio span {
+
+    color: #037bc0;
+}
+
+.contenedor {
+
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.contenedor-nav {
+
+    border-top-style: solid;
+    border-color: #e1e1e1;
+    border-width: 0.1rem;
+}
+
+.nav-principal {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 0;
+}
+
+
+
+/* hero*/
+
+.hero {
+
+    background-image: url(../img/principal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 60rem;
+}
+
+
+/* categorias*/
+
+
+.categorias a {
+
+    display: block;
+    text-align: center;
+    padding: 1rem;
+
+    
+}
+
+.categorias a:hover {
+
+    color: #fff;
+    background-color: #037bc0;
+    border-bottom-right-radius: 2rem;
+}
+
+.contenedor-categorias {
+    margin-bottom: 4rem;
+    display: grid;
+    /*  crea la distribuicion de las regillas en grid
+    repeat es una funcion le estamos diciendo que va a crear 3 columnas de 
+    1fr  */
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+}
+
+
+/* si¿obre nosostros */
+
+.sobre-nosotros {
+background-image: linear-gradient( to right, transparent 50%, #037bc0 50% ,#037bc0 100%), url(../img/nosotros.jpg);
+background-position: left center ;
+background-repeat: no-repeat;
+background-size: 100%, 120rem;
+
+}
+ 
+.sobre-nosotros-grid {
+display: flex;
+justify-content: flex-end;
+
+
+}
+.texto-nosotros{
+flex-basis: 50%;
+padding-left: 20rem;
+color: #fff;
+
+}
+
+
+/* listado pruductos */
+
+.listado-productos{
+
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 2rem;
+    
+}
+
+.producto:nth-child(1){
+   
+    grid-column: 1/7;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+
+.producto:nth-child(2){
+   
+    grid-column: 1/4;
+}
+
+.producto:nth-child(3){
+   
+    grid-column: 4/7;
+}
+
+.producto:nth-child(4){
+   
+    grid-column: 1/3;
+}
+
+.producto:nth-child(5){
+   
+    grid-column: 3/5;
+}
+
+.producto:nth-child(6){
+   
+    grid-column: 5/7;
+    
+}
+
+.producto:nth-child(1) img{
+
+    height: 43rem;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.producto:nth-child(2) img,.producto:nth-child(3) img{
+
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.producto{
+
+    background-color: #037bc0;
+}
+
+.texto-producto h3{
+
+margin: 0;
+}
+
+.texto-producto{
+
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+}
+
+
+.precio-producto{
+
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 0;
+}
+
+
+.texto-producto a{
+    background-color: #8cbc00;
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color 3s ease-out;
+
+}
+
+.texto-producto a:hover{
+
+    background-color: #769c02;
+}
+
+/* footer */
+
+
+.site-footer{
+
+    border-top: 1px solid  #e1e1e1;
+    margin-top: 10rem;
+    padding-top: 5rem;
+}
+
+.grid-footer{
+
+    display: flex;
+    column-gap: 10rem;
+    justify-content: space-between;
+}
+
+
+.grid-footer a{
+
+    display: block;
+}
+
+.copyrith{
+
+    margin-top: 5rem;
+    text-align: center;
+}
+
+
+/* nosotros styles */
+
+
+.contenido-nosotros{
+
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+   column-gap: 5rem;
+    
+}
+
+.informacion-nosotros{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
