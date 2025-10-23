@@ -359,3 +359,11 @@ margin: 0;
     color: #037bc0;
     
 }
+
+
+/* entrada  blog */
+
+.contenido-entrada-blog{
+    width: 60rem;
+    margin: 0 auto;
+}
