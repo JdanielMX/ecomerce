@@ -58,6 +58,7 @@ a {
 }
 
 .btn {
+    border: none;
     background-color: #8cbc00;
     display: block;
     color: #fff;
@@ -70,6 +71,7 @@ a {
 
 .btn:hover {
     background-color: #769c02;
+    cursor: pointer;
 }
 
 .max-width-30{
@@ -388,4 +390,50 @@ margin: 0;
     width: 40rem;
     object-fit: cover;
 
+}
+
+
+/* formulario contacto */
+
+.formulario{
+
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.formulario fieldset{
+
+    border-color: black;
+    border-width: 2px;
+    margin-bottom: 2rem;
+}
+
+.formulario legend{
+
+    text-align: center;
+    width: 100%;
+    background-color: #005485;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 1rem;
+    font-weight: 900;
+    margin-bottom: 4rem;
+    
+}
+
+.campo{
+
+    display: flex;
+    margin-bottom: 2rem;
+   
+}
+.campo label{
+    
+    flex-basis: 10rem;
+}
+
+.campo input:not([type="radio"]),
+.campo textarea, .campo select{
+
+    flex: 1;
 }
