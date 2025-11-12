@@ -625,6 +625,24 @@ img {
 
 }
 
+.formulario input{
+
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+@media (min-width: 768px) { 
+    
+    .formulario input{
+
+        width: auto;
+        margin: 0;
+    }
+}
+
+
+
 .campo {
 
     display: flex;
